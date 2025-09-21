@@ -1,0 +1,12 @@
+/* ===== LÁBLÉC ===== */
+.main-footer-bottom {
+    background: var(--dark-color);
+    color: var(--light-color);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.main-footer-bottom p {
+    margin: 0.2rem 0;
+    font-size: 0.9rem;
+}

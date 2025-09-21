@@ -1,0 +1,115 @@
+/* ===== HŐS SZEKCIÓ ANIMÁCIÓVAL ===== */
+.hero-section {
+    padding-top: 150px; /* Hely a fixált fejlécnek */
+    height: 100vh;
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    /* Az eredeti háttér most az overlayen van, ez lehet egy fallback */
+    background-color: #2c3e50; 
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* A te módosításod megtartva */
+    background: url(https://kerthungaria.hu/wp-content/uploads/2021/04/gyeptegla_kerthungaria-13.jpg) no-repeat center center/cover;
+    /* Hozzáadunk egy enyhe sötétítést, hogy a szöveg olvashatóbb legyen */
+    filter: brightness(0.7);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    /* A jobb olvashatóság érdekében árnyékot adhatunk a szövegnek */
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 1rem auto 2rem;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+/* Kezdő animációk */
+.animate-on-load { animation: fadeInDown 1s ease-out both; }
+.animate-on-load-delay1 { animation: fadeInDown 1s 0.3s ease-out both; }
+.animate-on-load-delay2 { animation: fadeInUp 1s 0.6s ease-out both; }
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Szórófej animáció */
+.sprinkler-animation {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    width: 300px;
+    height: 300px;
+}
+
+.sprinkler-head {
+    width: 40px;
+    height: 60px;
+    background: #95a5a6;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.water-drops {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    width: 1px;
+    height: 1px;
+}
+
+.drop {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* --- MÓDOSÍTÁS ITT --- */
+    /* Nagyobb vízcseppek a jobb láthatóságért */
+    width: 4px; /* Eredetileg: 3px */
+    height: 25px; /* Eredetileg: 20px */
+    background: linear-gradient(transparent, var(--primary-color));
+    animation: spray 1.5s ease-out infinite;
+    opacity: 0;
+}
+
+@keyframes spray {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--x-end), var(--y-end)) scale(0);
+        opacity: 0;
+    }
+}

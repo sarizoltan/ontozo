@@ -1,0 +1,64 @@
+/* ===== KAPCSOLAT SZEKCIÓ ===== */
+.contact-section {
+    background: var(--light-color);
+}
+
+.contact-section h2, .contact-section p {
+    text-align: center;
+}
+.contact-section p {
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+}
+
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.form-group {
+    position: relative;
+    width: calc(50% - 0.75rem);
+}
+
+.form-group.full-width {
+    width: 100%;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: var(--font-family);
+    background: var(--white-color);
+}
+
+.form-group label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #999;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.form-group input:focus + label,
+.form-group input:valid + label,
+.form-group textarea:focus + label,
+.form-group textarea:valid + label {
+    top: -10px;
+    left: 5px;
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    background: var(--light-color);
+    padding: 0 5px;
+}
+
+.contact-form .cta-button {
+    margin: 1rem auto 0;
+}
