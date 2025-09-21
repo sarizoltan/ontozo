@@ -71,15 +71,16 @@
 }
 
 .sprinkler-head {
-    width: 40px;
+    width: 60px;
     height: 60px;
-    background: #95a5a6;
+    background: url('../img/szorofej.png') no-repeat center center/contain;
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    /* Eltávolíthatod a háttérszínt (#95a5a6), arra már nincs szükség */
 }
 
 .water-drops {
