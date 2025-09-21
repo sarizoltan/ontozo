@@ -21,6 +21,30 @@
     <link rel="stylesheet" href="assets/css/process.css">
     <link rel="stylesheet" href="assets/css/contact.css">
     <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/social-proof.css">
+    <link rel="stylesheet" href="assets/css/pricing.css">
+    <link rel="stylesheet" href="assets/css/faq.css">
+    <link rel="stylesheet" href="assets/css/popups.css">
+    <link rel="stylesheet" href="assets/css/whatsapp.css">
+    <link rel="stylesheet" href="assets/css/countdown.css">
+
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'YOUR_PIXEL_ID'); // Replace with actual Facebook Pixel ID
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
 </head>
 <body>
 
@@ -38,10 +62,44 @@
     <main>
         <!-- ===== HŐS SZEKCIÓ ===== -->
         <section id="hero" class="hero-section">
+            <!-- Sürgősségi számláló -->
+            <div class="urgency-banner">
+                <div class="container">
+                    <div class="countdown-container">
+                        <span class="countdown-text">🔥 Facebook AKCIÓ! A kedvezmény még</span>
+                        <div class="countdown-timer">
+                            <span id="countdown-hours">23</span>:
+                            <span id="countdown-minutes">59</span>:
+                            <span id="countdown-seconds">59</span>
+                        </div>
+                        <span class="countdown-text">ideig él!</span>
+                    </div>
+                </div>
+            </div>
+            
             <div class="hero-content container">
-                <h1 class="animate-on-load">Tökéletes Pázsit, Fáradság Nélkül</h1>
-                <p class="animate-on-load-delay1">Automata öntözőrendszerek tervezése és professzionális telepítése, hogy kertje mindig a legszebb arcát mutassa.</p>
-                <a href="#contact" class="cta-button animate-on-load-delay2">Ingyenes Ajánlatot Kérek</a>
+                <h1 class="animate-on-load">🌿 Álomkert Automatikusan<br><span class="highlight">Fáradság és Stressz Nélkül!</span></h1>
+                <p class="animate-on-load-delay1">⚡ <strong>VÉGRE szabaduljon meg a napi locsolás terhétől!</strong> Profi automata öntözőrendszerünkkel minden reggel tökéletes, üde zöld kertre ébredhet - miközben Ön nyugodtan alszik vagy dolgozik.</p>
+                
+                <div class="hero-benefits">
+                    <div class="hero-benefit">✓ <strong>50% víz megtakarítás</strong> - kevesebbet fizet</div>
+                    <div class="hero-benefit">✓ <strong>Napi 1 óra időmegtakarítás</strong> - több idő a családra</div>
+                    <div class="hero-benefit">✓ <strong>Szomszédok irigykedni fognak</strong> - mindig zöld pázsit</div>
+                </div>
+                
+                <div class="cta-buttons">
+                    <a href="#contact" class="cta-button primary animate-on-load-delay2" onclick="fbq('track', 'InitiateCheckout');">
+                        🎁 INGYENES Helyszíni Felmérés + Ajánlat!
+                    </a>
+                    <a href="#pricing" class="cta-button secondary animate-on-load-delay2">
+                        💰 Facebook Árak Megtekintése
+                    </a>
+                </div>
+                
+                <div class="guarantee-badge">
+                    <span class="guarantee-icon">🛡️</span>
+                    <span class="guarantee-text"><strong>100% elégedettségi garancia</strong><br>vagy visszaadjuk a pénzét!</span>
+                </div>
             </div>
             <div class="sprinkler-animation">
                 <div class="sprinkler-head"></div>
@@ -71,6 +129,90 @@
                         <div class="benefit-icon">🌿</div>
                         <h3>Egészségesebb Növényzet</h3>
                         <p>A rendszeres és egyenletes vízellátás garantálja a dús, zöld pázsitot és a virágzó, életerős növényeket.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== TÁRSADALMI BIZONYÍTÉK SZEKCIÓ ===== -->
+        <section id="social-proof" class="social-proof-section">
+            <div class="container">
+                <h2>🏆 Már 1200+ elégedett ügyfelünk van Magyarországon!</h2>
+                
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <div class="stat-number">1200+</div>
+                        <div class="stat-label">Telepített rendszer</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Év tapasztalat</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Elégedett ügyfél</div>
+                    </div>
+                </div>
+
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"Fantasztikus! Már nem kell hajnalban kelnem locsolni. A pázsit sosem volt szebb, a szomszédok folyamatosan kérdezik a titkot."</p>
+                        <div class="testimonial-author">
+                            <strong>Kovács Péter</strong> - Budapest, II. kerület
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"50%-kal kevesebb víz, és mégis zöldebb a kert! A befektetés már az első évben megtérült a vízszámlán."</p>
+                        <div class="testimonial-author">
+                            <strong>Nagy Eszter</strong> - Debrecen
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"A telepítés gyors és precíz volt. Most végre van időm élvezni a kertet, ahelyett hogy állandóan karbantartanám."</p>
+                        <div class="testimonial-author">
+                            <strong>Szabó Gábor</strong> - Szeged
+                        </div>
+                    </div>
+                </div>
+
+                <div class="before-after-section">
+                    <h3>🔥 Előtte - Utána Fotók</h3>
+                    <div class="before-after-grid">
+                        <div class="before-after-item">
+                            <div class="before-after-image">
+                                <div class="image-placeholder before">
+                                    <span>ELŐTTE</span>
+                                    <p>Sárgás, egyenetlen pázsit</p>
+                                </div>
+                            </div>
+                            <div class="arrow">➡️</div>
+                            <div class="before-after-image">
+                                <div class="image-placeholder after">
+                                    <span>UTÁNA</span>
+                                    <p>Dús, egyenletes zöld szőnyeg</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="trust-badges">
+                    <div class="trust-badge">
+                        <span class="badge-icon">🏅</span>
+                        <span class="badge-text">Mestercégek Országos Szövetsége tag</span>
+                    </div>
+                    <div class="trust-badge">
+                        <span class="badge-icon">🛡️</span>
+                        <span class="badge-text">5 év teljes körű garancia</span>
+                    </div>
+                    <div class="trust-badge">
+                        <span class="badge-icon">⚡</span>
+                        <span class="badge-text">24 órás hibaelhárítás</span>
                     </div>
                 </div>
             </div>
@@ -113,6 +255,121 @@
             </div>
         </section>
 
+        <!-- ===== ÁRAK SZEKCIÓ (FACEBOOK KEDVEZMÉNNYEL) ===== -->
+        <section id="pricing" class="pricing-section">
+            <div class="container">
+                <h2>💰 Facebook Exkluzív Árak - Csak Ma!</h2>
+                <p class="pricing-subtitle">🔥 Normál ár helyett most <strong>30% kedvezménnyel</strong> rendelhet!</p>
+                
+                <div class="pricing-grid">
+                    <div class="pricing-card basic">
+                        <div class="pricing-header">
+                            <h3>ALAPCSOMAG</h3>
+                            <div class="pricing-badge">Legkedveltebb!</div>
+                        </div>
+                        <div class="pricing-body">
+                            <div class="price-container">
+                                <div class="old-price">690.000 Ft</div>
+                                <div class="new-price">490.000 Ft</div>
+                                <div class="discount">30% MEGTAKARÍTÁS</div>
+                            </div>
+                            <div class="area-info">200 m² kert területig</div>
+                            <ul class="features-list">
+                                <li>✓ 6 zónás öntözővezérlő</li>
+                                <li>✓ 12 db pop-up szórófej</li>
+                                <li>✓ Esőérzékelő</li>
+                                <li>✓ 5 év garancia</li>
+                                <li>✓ Ingyenes karbantartás 1 évig</li>
+                                <li>✓ Telepítés és beüzemelés</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <a href="#contact" class="pricing-cta-button" onclick="fbq('track', 'AddToCart', {value: 490000, currency: 'HUF'});">
+                                MOST RENDELEM! 🚀
+                            </a>
+                            <div class="guarantee-text">
+                                💳 Részletfizetés lehetséges<br>
+                                🛡️ 100% pénzvisszafizetési garancia
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-card premium featured">
+                        <div class="pricing-header">
+                            <h3>PRÉMIUM CSOMAG</h3>
+                            <div class="pricing-badge featured">Ajánlott!</div>
+                        </div>
+                        <div class="pricing-body">
+                            <div class="price-container">
+                                <div class="old-price">1.290.000 Ft</div>
+                                <div class="new-price">890.000 Ft</div>
+                                <div class="discount">31% MEGTAKARÍTÁS</div>
+                            </div>
+                            <div class="area-info">500 m² kert területig</div>
+                            <ul class="features-list">
+                                <li>✓ 12 zónás vezérlő + WiFi</li>
+                                <li>✓ 24 db pop-up szórófej</li>
+                                <li>✓ Csepegtetőrendszer</li>
+                                <li>✓ Időjárási érzékelő</li>
+                                <li>✓ Mobilalkalmazás vezérlés</li>
+                                <li>✓ 5 év garancia + karbantartás</li>
+                                <li>✓ VIP telepítés és beüzemelés</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <a href="#contact" class="pricing-cta-button featured" onclick="fbq('track', 'AddToCart', {value: 890000, currency: 'HUF'});">
+                                MOST RENDELEM! 🔥
+                            </a>
+                            <div class="guarantee-text">
+                                💳 0% kamat 12 hónapig<br>
+                                🛡️ Dupla garancia: 10 év!
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-card luxury">
+                        <div class="pricing-header">
+                            <h3>LUXUS CSOMAG</h3>
+                            <div class="pricing-badge">Prémium!</div>
+                        </div>
+                        <div class="pricing-body">
+                            <div class="price-container">
+                                <div class="old-price">1.990.000 Ft</div>
+                                <div class="new-price">1.390.000 Ft</div>
+                                <div class="discount">30% MEGTAKARÍTÁS</div>
+                            </div>
+                            <div class="area-info">1000+ m² kert területig</div>
+                            <ul class="features-list">
+                                <li>✓ 16 zónás profi vezérlő</li>
+                                <li>✓ 40+ db szórófej + rotátor</li>
+                                <li>✓ Automata trágyázórendszer</li>
+                                <li>✓ Mesterséges intelligencia</li>
+                                <li>✓ Évszakos automatika</li>
+                                <li>✓ Lifetime garancia és karbantartás</li>
+                                <li>✓ Exkluzív 24/7 support</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <a href="#contact" class="pricing-cta-button" onclick="fbq('track', 'AddToCart', {value: 1390000, currency: 'HUF'});">
+                                MOST RENDELEM! 💎
+                            </a>
+                            <div class="guarantee-text">
+                                💳 Egyedi finanszírozás<br>
+                                🛡️ Lifetime garancia!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pricing-bottom-cta">
+                    <p class="urgency-text">⏰ <strong>Ez az ár csak ma érvényes!</strong> Holnap már normál áron.</p>
+                    <a href="#contact" class="cta-button mega" onclick="fbq('track', 'Purchase');">
+                        🎁 INGYENES FELMÉRÉST KÉREK!
+                    </a>
+                </div>
+            </div>
+        </section>
+
         <!-- ===== KAPCSOLAT (AJÁNLATKÉRÉS) SZEKCIÓ ===== -->
         <section id="contact" class="contact-section">
             <div class="container">
@@ -135,8 +392,82 @@
                         <textarea id="message" name="message" rows="4" required></textarea>
                         <label for="message">Üzenet (pl. a kert mérete, jellege)</label>
                     </div>
-                    <button type="submit" class="cta-button">Ajánlatkérés elküldése</button>
+                    <button type="submit" class="cta-button" onclick="fbq('track', 'Lead');">Ajánlatkérés elküldése</button>
                 </form>
+            </div>
+        </section>
+
+        <!-- ===== GYAKORI KÉRDÉSEK SZEKCIÓ ===== -->
+        <section id="faq" class="faq-section">
+            <div class="container">
+                <h2>❓ Gyakori Kérdések - Gyors Válaszok</h2>
+                
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>🕒 Mennyi ideig tart a telepítés?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Egy átlagos 200-300 m²-es kert esetén 1-2 nap alatt teljes mértékben kész. Nagyobb területeknél 2-3 nap. A földmunka minimális, így a kert alig sérül.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>💰 Mennyit takarítok meg évente?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Ügyfeleink átlagosan 40-60% vizet takarítanak meg, ami évi 50-100.000 Ft megtakarítást jelent. Ráadásul a növények egészségesebbek lesznek.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>🛠️ Mennyire bonyolult a kezelés?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Egyáltalán nem! A telepítés után betanítjuk Önt, de a rendszer automatikusan működik. Szükség esetén mobilappról is irányíthatja.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>❄️ Mi van télen? Lefagy a rendszer?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Nem! Minden rendszerünk fagyálló. Télen automatikusan lecsapolja magát, tavasszal pedig újra beüzemeli. Semmi teendője nincs.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>🌧️ Mi van ha esik? Feleslegesen öntöz?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Természetesen nem! Minden rendszerünkbe beépítünk esőérzékelőt, ami automatikusan leállítja az öntözést eső esetén.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>🔧 Mi van ha elromlik? Ki javítja?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>5 év teljes garanciát adunk! Bármilyen hiba esetén 24 órán belül kiérünk javítani. Az első év karbantartása ingyenes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-bottom-cta">
+                    <p>További kérdése van? Hívjon most!</p>
+                    <a href="tel:+36301234567" class="phone-cta">📞 +36 30 123 4567</a>
+                </div>
             </div>
         </section>
     </main>
@@ -148,10 +479,70 @@
         </div>
     </footer>
 
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/36301234567?text=Szia! Érdekel az automata öntözőrendszer telepítés. Szeretnék ingyenes felmérést kérni!" 
+       class="whatsapp-float" 
+       target="_blank"
+       onclick="fbq('track', 'Contact');">
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMjAiIGZpbGw9IiMyNUQzNjYiLz4KPHBhdGggZD0iTTIwIDhDMTMuMzcgOCA4IDEzLjM3IDggMjBDOCAyMi4yIDguNjUgMjQuMjcgOS43NSAyNkw4IDMyTDE0IDMwLjI1QzE1LjczIDMxLjM1IDE3LjggMzIgMjAgMzJDMjYuNjMgMzIgMzIgMjYuNjMgMzIgMjBDMzIgMTMuMzcgMjYuNjMgOCAyMCA4Wk0yMCAyOS41QzE4LjEyIDI5LjUgMTYuMzUgMjguOTUgMTQuOTUgMjhMMTMuNSAyOC41TDE0IDI3LjA1QzEzLjA1IDI1LjY1IDEyLjUgMjMuODggMTIuNSAyMEMxMi41IDE1Ljg2IDE1Ljg2IDEyLjUgMjAgMTIuNUMyNC4xNCAxMi41IDI3LjUgMTUuODYgMjcuNSAyMEMyNy41IDI0LjE0IDI0LjE0IDI3LjUgMjAgMjcuNVoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=" alt="WhatsApp">
+        <span class="whatsapp-text">Gyors kapcsolat!</span>
+    </a>
+
+    <!-- Lead Magnet Popup -->
+    <div id="lead-popup" class="popup-overlay">
+        <div class="popup-content">
+            <div class="popup-close">&times;</div>
+            <div class="popup-header">
+                <h3>🎁 Exkluzív Ajánlat!</h3>
+                <p>Csak ma: <strong>INGYENES helyszíni felmérés</strong> + személyre szabott terv!</p>
+            </div>
+            <form id="lead-form" class="popup-form">
+                <input type="text" name="popup-name" placeholder="Az Ön neve" required>
+                <input type="tel" name="popup-phone" placeholder="Telefonszám" required>
+                <input type="email" name="popup-email" placeholder="E-mail cím" required>
+                <button type="submit" class="popup-cta-button" onclick="fbq('track', 'Lead');">
+                    ✨ INGYENES FELMÉRÉST KÉREK!
+                </button>
+            </form>
+            <div class="popup-guarantee">
+                🛡️ 100% kötelezettség nélkül • 📞 Felhívjuk 24 órán belül
+            </div>
+        </div>
+    </div>
+
+    <!-- Exit Intent Popup -->
+    <div id="exit-popup" class="popup-overlay exit-popup">
+        <div class="popup-content exit-content">
+            <div class="popup-close exit-close">&times;</div>
+            <div class="exit-header">
+                <h3>🚨 Várjon! Ne menjen el üres kézzel!</h3>
+                <p class="exit-offer">EXKLUZÍV: <span class="highlight">-40% kedvezmény</span> ha most rendel!</p>
+            </div>
+            <div class="exit-benefits">
+                <div class="exit-benefit">✓ Ingyenes helyszíni felmérés</div>
+                <div class="exit-benefit">✓ 40% Facebook kedvezmény</div>
+                <div class="exit-benefit">✓ 5 év garancia</div>
+                <div class="exit-benefit">✓ 0% kamat 12 hónapig</div>
+            </div>
+            <form id="exit-form" class="popup-form">
+                <input type="text" name="exit-name" placeholder="Az Ön neve" required>
+                <input type="tel" name="exit-phone" placeholder="Telefonszám" required>
+                <button type="submit" class="popup-cta-button featured" onclick="fbq('track', 'Lead');">
+                    🔥 IGÉNYBE VESZEM A 40% KEDVEZMÉNYT!
+                </button>
+            </form>
+            <div class="popup-guarantee">
+                ⏰ Ez az ajánlat csak ma érvényes! • 📞 Felhívjuk 1 órán belül
+            </div>
+        </div>
+    </div>
+
     <!-- Szekciónkénti JavaScript fájlok -->
     <script src="assets/js/hero.js"></script>
     <script src="assets/js/main.js"></script>
-    <!-- A többi szekcióhoz jelenleg nincs szükség külön JS-re, de a helyük megvan. -->
+    <script src="assets/js/countdown.js"></script>
+    <script src="assets/js/popups.js"></script>
+    <script src="assets/js/faq.js"></script>
     
 </body>
 </html>
