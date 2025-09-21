@@ -1,9 +1,10 @@
 /* ===== HŐS SZEKCIÓ ANIMÁCIÓVAL ===== */
 .hero-section {
-    padding-top: 150px; /* Hely a fixált fejlécnek */
+    padding-top: 100px; /* Hely a fixált fejlécnek és countdown bannernek */
     height: 100vh;
     color: var(--white-color);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -32,17 +33,97 @@
 }
 
 .hero-content h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 700;
     /* A jobb olvashatóság érdekében árnyékot adhatunk a szövegnek */
     text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    margin-bottom: 1.5rem;
+}
+
+.hero-content h1 .highlight {
+    color: #f39c12;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
 }
 
 .hero-content p {
     font-size: 1.2rem;
-    max-width: 600px;
+    max-width: 700px;
     margin: 1rem auto 2rem;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+.hero-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin: 2rem auto;
+    max-width: 600px;
+}
+
+.hero-benefit {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+    background: rgba(46, 204, 113, 0.8);
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    border: 2px solid rgba(255,255,255,0.3);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.cta-button.primary {
+    background: linear-gradient(45deg, #e74c3c, #c0392b);
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+    animation: pulse 2s infinite;
+}
+
+.cta-button.secondary {
+    background: linear-gradient(45deg, #3498db, #2980b9);
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+}
+
+.guarantee-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    background: rgba(255,255,255,0.9);
+    color: var(--dark-color);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    max-width: 400px;
+    margin: 2rem auto 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.guarantee-icon {
+    font-size: 1.5rem;
+}
+
+.guarantee-text {
+    font-size: 0.9rem;
+    line-height: 1.3;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
 }
 
 /* Kezdő animációk */
@@ -75,42 +156,88 @@
     height: 60px;
     background: url('../img/szorofej.png') no-repeat center center/contain;
     position: absolute;
-    bottom: 0;
+    bottom: 100px;
     left: 50%;
     transform: translateX(-50%);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    /* Eltávolíthatod a háttérszínt (#95a5a6), arra már nincs szükség */
+    animation: sprinklerRotate 4s linear infinite;
 }
 
 .water-drops {
     position: absolute;
-    bottom: 60px;
+    bottom: 160px;
     left: 50%;
-    width: 1px;
-    height: 1px;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
 }
 
 .drop {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    /* --- MÓDOSÍTÁS ITT --- */
-    /* Nagyobb vízcseppek a jobb láthatóságért */
-    width: 4px; /* Eredetileg: 3px */
-    height: 25px; /* Eredetileg: 20px */
-    background: linear-gradient(transparent, var(--primary-color));
-    animation: spray 1.5s ease-out infinite;
-    opacity: 0;
+    width: 4px;
+    height: 8px;
+    background: rgba(135, 206, 250, 0.8);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    left: 50%;
+    top: 50%;
+    animation: dropFall 2s linear infinite;
 }
 
-@keyframes spray {
+@keyframes sprinklerRotate {
+    0% { transform: translateX(-50%) rotate(0deg); }
+    100% { transform: translateX(-50%) rotate(360deg); }
+}
+
+@keyframes dropFall {
     0% {
-        transform: translate(0, 0) scale(1);
+        transform: translate(0, 0);
         opacity: 1;
     }
     100% {
-        transform: translate(var(--x-end), var(--y-end)) scale(0);
+        transform: translate(var(--x-end), var(--y-end));
         opacity: 0;
+    }
+}
+
+/* Mobil optimalizálás */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .hero-benefits {
+        padding: 0 1rem;
+    }
+    
+    .hero-benefit {
+        font-size: 1rem;
+        padding: 0.6rem 1rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .cta-button {
+        width: 90%;
+        max-width: 300px;
+        font-size: 1rem !important;
+        padding: 0.8rem 1.5rem !important;
+    }
+    
+    .guarantee-badge {
+        margin: 1.5rem 1rem 0;
+        padding: 0.8rem 1.5rem;
+    }
+    
+    .guarantee-text {
+        font-size: 0.8rem;
     }
 }
