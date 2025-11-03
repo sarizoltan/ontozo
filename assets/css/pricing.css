@@ -1,0 +1,284 @@
+/* ===== ÁRAK SZEKCIÓ ===== */
+.pricing-section {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    color: white;
+    padding: 4rem 0;
+}
+
+.pricing-section h2 {
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.pricing-subtitle {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+    color: #f39c12;
+    font-weight: 600;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.pricing-card {
+    background: white;
+    color: var(--dark-color);
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    transform: translateY(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.pricing-card.featured {
+    transform: scale(1.05);
+    border: 3px solid #f39c12;
+    box-shadow: 0 15px 40px rgba(243, 156, 18, 0.3);
+}
+
+.pricing-card.featured:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+.pricing-header {
+    background: linear-gradient(45deg, #34495e, #2c3e50);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+}
+
+.pricing-card.featured .pricing-header {
+    background: linear-gradient(45deg, #f39c12, #e67e22);
+}
+
+.pricing-header h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.pricing-badge {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    background: var(--secondary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transform: rotate(10deg);
+}
+
+.pricing-badge.featured {
+    background: #e74c3c;
+    animation: pulse 2s infinite;
+}
+
+.pricing-body {
+    padding: 2rem;
+}
+
+.price-container {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.old-price {
+    font-size: 1.2rem;
+    text-decoration: line-through;
+    color: #95a5a6;
+    margin-bottom: 0.5rem;
+}
+
+.new-price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.discount {
+    background: #e74c3c;
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.area-info {
+    text-align: center;
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+}
+
+.features-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ecf0f1;
+    font-size: 0.95rem;
+}
+
+.features-list li:last-child {
+    border-bottom: none;
+}
+
+.pricing-footer {
+    padding: 0 2rem 2rem;
+    text-align: center;
+}
+
+.pricing-cta-button {
+    display: block;
+    width: 100%;
+    background: linear-gradient(45deg, var(--secondary-color), #27ae60);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+.pricing-cta-button.featured {
+    background: linear-gradient(45deg, #e74c3c, #c0392b);
+    font-size: 1.2rem;
+    animation: pulse 2s infinite;
+}
+
+.pricing-cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px rgba(46, 204, 113, 0.5);
+    }
+    to {
+        box-shadow: 0 0 20px rgba(46, 204, 113, 0.8), 0 0 30px rgba(46, 204, 113, 0.6);
+    }
+}
+
+.guarantee-text {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    line-height: 1.4;
+}
+
+/* Bottom CTA */
+.pricing-bottom-cta {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.urgency-text {
+    font-size: 1.2rem;
+    color: #f39c12;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.cta-button.mega {
+    font-size: 1.4rem;
+    padding: 1.2rem 3rem;
+    background: linear-gradient(45deg, #e74c3c, #c0392b);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: mega-pulse 2s infinite;
+}
+
+@keyframes mega-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Mobil optimalizálás */
+@media (max-width: 768px) {
+    .pricing-section h2 {
+        font-size: 2rem;
+        padding: 0 1rem;
+    }
+    
+    .pricing-subtitle {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+    
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+    
+    .pricing-card.featured {
+        transform: none;
+    }
+    
+    .pricing-card.featured:hover {
+        transform: translateY(-5px);
+    }
+    
+    .new-price {
+        font-size: 2rem;
+    }
+    
+    .pricing-cta-button {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+    
+    .pricing-cta-button.featured {
+        font-size: 1.1rem;
+    }
+    
+    .cta-button.mega {
+        font-size: 1.2rem;
+        padding: 1rem 2rem;
+        margin: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .pricing-body {
+        padding: 1.5rem;
+    }
+    
+    .pricing-footer {
+        padding: 0 1.5rem 1.5rem;
+    }
+    
+    .features-list li {
+        font-size: 0.9rem;
+    }
+}
